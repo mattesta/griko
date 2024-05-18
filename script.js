@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const homeLink = document.getElementById('home-link');
+    const exercisesLink = document.getElementById('exercises-link');
+    const homeSection = document.getElementById('home-section');
+    const exercisesSection = document.getElementById('exercises-section');
     const exerciseContainer = document.getElementById('exercise-container');
 
     // Example exercise data
@@ -41,5 +45,18 @@ document.addEventListener('DOMContentLoaded', function() {
         exerciseDiv.appendChild(submitButton);
 
         exerciseContainer.appendChild(exerciseDiv);
+    });
+
+    // Event listeners for navigation
+    homeLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        homeSection.style.display = 'block';
+        exercisesSection.style.display = 'none';
+    });
+
+    exercisesLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        homeSection.style.display = 'none';
+        exercisesSection.style.display = 'block';
     });
 });
