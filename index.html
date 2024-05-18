@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Language Learning Site</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <h1>Welcome to Language Learning Site</h1>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Exercises</a>
+            <a href="#" id="home-link">Home</a>
+            <a href="#" id="exercises-link">Exercises</a>
         </nav>
     </header>
     <main>
-        <h2>Learn a New Language!</h2>
-        <p>Practice makes perfect. Start learning today.</p>
+        <section id="home-section">
+            <h2>Learn a New Language!</h2>
+            <p>Practice makes perfect. Start learning today.</p>
+        </section>
+        <section id="exercises-section" style="display:none;">
+            <h2>Exercises</h2>
+            <div id="exercise-container"></div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Language Learning Site</p>
